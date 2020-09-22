@@ -56,7 +56,7 @@ if (isset($_GET['p'])) {
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $r['menu']?></h5>
                             <p class="card-text">Rp.<?php echo $r['harga']?></p>
-                            <a class="btn btn-primary" href="?f=kategori&m=insert" role="button">Beli</a>
+                            <a class="btn btn-primary" href="?f=home&m=beli&id=<?php echo $r['idmenu']?>" role="button">Beli</a>
                         </div>
             </div>
 
