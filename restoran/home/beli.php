@@ -5,6 +5,7 @@
 if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
     unset($_SESSION['_'.$id]);
+    header("location:?f=home&m=beli");
 
     
 }
@@ -60,7 +61,7 @@ if (isset($_GET['hapus'])) {
         $total = 0;
 
 
-
+        global $total;
 
 
         echo '
@@ -116,4 +117,21 @@ if (isset($_GET['hapus'])) {
 
     
 
+    
+
+?>
+
+<?php 
+
+if (!empty($total)) {
+    
+
+
+?>
+
+<a class="btn btn-primary" href="?f=home&m=checkout&total=<?php echo $total?>" role="button">Check out</a>
+
+<?php 
+
+}
 ?>
